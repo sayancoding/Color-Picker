@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Picker</title>
+    <link rel="shortcut icon" href="colorpicker.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-head">
+            COLOR PICKER
+    </header>
+    <div class="container-input">
+            <div class="slider">
+                    <label for="r">R:</label>
+                    <input type="range" id="r" class="myslider" in="0" max="255" step="1" value="0">
+                    <label for="r" class="out" id="r_out">0</label>
+                </div>
+                <div class="slider">
+                    <label for="g">G:</label>
+                    <input type="range" class="myslider" id="g" min="0" max="255" step="1" value="0">
+                    <label for="g" class="out" id="g_out">0</label>
+                </div>
+                <div class="slider">
+                    <label for="b">B:</label>
+                    <input type="range" class="myslider" id="b" min="0" max="255" step="1" value="0">
+                    <label for="b" class="out" id="b_out">0</label>
+                </div>
+                <div class="hex_sec">
+                    <div id="hex_show" class="hex_show">#000000</div>
+                    <label for="copyhex">
+                            <img class="clipboard" src="clipboard.png" alt="clipboard">
+                    </label>
+                    <input type="button" class="btn" value="copy" onclick="copyHEX()" id="copyhex">
+                </div>
+                <div class="rgb_sec">
+                        <div id="rgb" class="rgb_show">rgb(0,0,0)</div>
+                        <label for="copyrg">
+                            <img class="clipboard" src="clipboard.png" alt="clipboard">
+                        </label>
+                        <input type="button" class="btn" value="copy" onclick="copyRGB()" id="copyrg">
+                </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
